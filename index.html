@@ -1,89 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luas dan Keliling Ruang Bangun Persegi</title>
-  <style>
-    *{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .tengah{
-      display: flex;
-      justify-content: center;
-    }
-     .card{
-      width: 40%
-      box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
-      transition: 0.3s;
-     }
-     #txBARU{
-      font-size: 20px;
-     }
-     .cardbody{
-      padding: 2px 16px;
-     }
-     .cardfooter{
-      padding: 8px;
-      background-color: azure;
-      display: flex;justify-content: right;
-     }
-     label{
-      font-weight: bold;
-      font-size: 14px;
-     }
-     input[type=text]{
-      width:100%;
-      padding:2px;
-      margin:8px 0px;
-     }
-     button{
-      border: none;
-      border-radius: 8px;
-      background-color: bisque
-      color:black
-      font-weight:black
-      padding: 8px 20px;
-     }
-  </style>
-</head>
+<html>
+</head></head>
 <body> 
-  <div class="tengah">
-  <div class="card">
-  <h1 id="txBARU">Ruang Bangun Persegi</h1>
-  <div class="cardbody">
-  <form>
-    <label>Nilai Panjang</label>
-      <input type="text" name="txPANJANG" id="txPANJANG">
-    <label>Nilai Lebar</label>
-      <input type="text" name="txLEBAR" id="txLEBAR">
-  </form>
-  <div id="txHASIL">Nilai Luas dan Keliling</div>
-</div>
-<div class="cardfooter">
-  <button onclick="pesan()">Hitung Luas dan Keliling </button>
-</div>
-</div>
-</div>
-  <script>
-    function pesan(){
-    //alert("ANYWAY PLEASE DON'T BE STRANGER")
-   let PJ = document.getElementById("txPANJANG").value
-   let LB = document.getElementById("txLEBAR").value
-  //Proses Hitung Luas
-   let LUAS = PJ*LB
-   let PJLB = parseFloat(PJ)+ Number(LB)
-   let KEL  = 2*PJLB
-   let hsl = "Hitung Luas Persegi <br>Luas = Panjang X Lebar<br>"
-   hsl += "Luas= "+PJ+"M X " +LB+"<br>"
-   hsl += "Luas= "+LUAS+"M<sup>2</sup><br><br>"
-   hsl += "Hitung Keliling Persegi <br>"
-   hsl += "Keliling = 2 X (Panjang+Lebar)<br>"
-   hsl += "Keliling = 2 X (" +PJ+ "M +" +LB+ "M)<br>"
-   hsl += "Keliling = 2 X "+PJLB+ "<br>"
-   hsl += "Keliling = "+KEL+" Meter"
-   document.getElementById("txHASIL").innerHTML=hsl   
-  }
-  </script>
+  <script src="main.js"> </script>
+  
+  <p>Masukan Sisi Pertama <input type=" text" id="s1"></p>
+  <p>Masukan Sisi Kedua <input type=" text" id="s2"></p>
+  <p>Masukan Sisi Ketiga <input type=" text" id="s3"></p>
+
+  <p>Masukan Alas Segitiga <input type="text" id="a"></p>
+  <p>Masukan Tinggi Segitiga <input type="text" id="t" oninput="luas(),kel()"></p>
+
+  <p>Luas Segitiga Adalah <span id="luas"></span></p>
+  <p>Keliling Segitiga Adalah <span id="kel"></span></p>
+  
 </body>
 </html>
